@@ -34,7 +34,7 @@ html, body {
     top: 20px;
     right: 0; /* Keeps the navbar aligned to the right */
     left: auto; /* Keeps it aligned to the right */
-    font-family: opening hours sans, sans-serif;
+    font-family: Opening Hours Sans, sans-serif;
     font-size: clamp(1px, 2vw, 15px); /* Responsive font size between 10px and 15px */
     display: flex;
     justify-content: flex-end; /* Align the links to the left */
