@@ -72,7 +72,7 @@ html, body {
 }
 
 .homePage h1 {
-    font-family: Opening Hours Sans, sans-serif;
+    font-family: ('fonts/OpeningHoursSans-Regular.woff', 'fonts/OpeningHoursSans-Regular.woff2');
     color: rgb(1, 3, 138);
     font-size: clamp(2rem, 8vw, 6rem);
     margin: 0;
