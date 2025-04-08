@@ -1,23 +1,26 @@
-body{
+body {
     background-color: rgb(252, 247, 238);
+    
 }
 
-.relative {
-    position: relative;
-    width: 50%;
-    height: 50%;
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* also helps if anything else causes sideways scroll */
 }
-.absolute
-{
-    position: absolute;
-    right: 0;
-}
-.home-title {
+
+.container {
     width: auto;
     height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+/* Desktop: Breakpoint for minimum 801px */
+@media (min-width: 801px) {
+    body {
+        font-size: 1rem; /* Example: Adjust font size for desktops */
+    }
 }
 @font-face {
     font-family: Opening Hours Sans;
@@ -26,96 +29,193 @@ body{
     font-weight: regular;
     font-style: regular;
 }
-
-h1 {
-    color:rgb(1,3,138);
-    font-family: Opening Hours Sans;
-    font-size: 6rem;
-    left:auto;
-    margin-top: -100px;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    width: 100%;
-    z-index: 2;
-    
-}
-
-h2 {
-    color: black;
-    font-family: sans-serif;
-    font-size: 1.5em;
-    
-}
-
-h3 {
-    color: black;
-    font-family: sans-serif;
-    font-size: 1.5em;
-}
-
-h4 {
-    color: black;
-    font-family: sans-serif;
-    font-size: 1.5em;
-}
-
-h5 {
-    color: black;
-    font-family: sans-serif;
-    font-size: 1.5em;
-}
-
-h6 {
-    color: black;
-    font-family: sans-serif;
-    font-size: 0.8em;
-}
-/* Mobile - tablet: This comment organizes my CSS declaration blocks for up to 800px */
-@media (max-width: 800px) {
-    body {  /* Apply styles to a specific element (e.g., body) */
-        font-size: 2rem;
-    }
-}
-
-/* Desktop: Breakpoint for minimum 801px */
-@media (min-width: 801px) {
-    body {
-        font-size: 1rem; /* Example: Adjust font size for desktops */
-    }
-}
-
-
-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: auto;
-    height: 500px;
-    margin:-250px 0 0 -250px; /* negative half of the width and height */
-    animation: spin 4s linear infinite;
-}
-
-@keyframes spin {
-    100% { transform: rotate(360deg); }
-}
-
 .nav-bar {
-    position: absolute;
+    position: fixed;
     top: 20px;
-    right: 20px;
+    right: 0; /* Keeps the navbar aligned to the right */
+    left: auto; /* Keeps it aligned to the right */
     font-family: Opening Hours Sans;
-    font-size: 17px;
+    font-size: clamp(1px, 2vw, 15px); /* Responsive font size between 10px and 15px */
+    display: flex;
+    justify-content: flex-end; /* Align the links to the left */
+    gap: 10px;
+    z-index: 9999;
+    width: 100%; /* Ensure the navbar takes full width */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Prevent horizontal scroll */
+    padding: 0 10px; /* Optional padding for better spacing */
 }
 
 .nav-bar a {
     color: black;
     text-decoration: none;
     margin: 0 5px;
-    transition: transform 0.3s ease-in-out; /* smooth zoom effect */
-    display: inline-block; /* ensures transform works properly */
+    transition: transform 0.3s ease-in-out;
+    display: inline-block;
+    transform-origin: center;
+    will-change: transform;
+    font-size: inherit; /* Inherit the font size from the parent */
+    white-space: nowrap; /* Prevent wrapping of links */
 }
 
 .nav-bar a:hover {
-    transform: scale(1.2); /* zoom in effect */
+    transform: scale(1.1); /* zoom in effect */
 }
+
+.homePage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    position: relative;
+    text-align: center;
+}
+
+.homePage h1 {
+    font-family: Opening Hours Sans;
+    color: rgb(1, 3, 138);
+    font-size: clamp(2rem, 8vw, 6rem);
+    margin: 0;
+    transition: font-size 0.3s ease-in-out;
+    z-index: 1;
+    transform: translateY(-43%); /* Raise it above center slightly */
+}
+
+.rotating-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.rotated-img {
+    height: clamp(150px, 40vw, 400px); /* Shrinks smoothly with viewport */
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: Opening Hours Sans, sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    color: rgb(1, 3, 138);
+    padding-top: 5%;
+}
+
+
+.image-gallery {
+    display: flex; /* Align images in a row */
+    justify-content: center; /* Center images */
+    gap: 20px; /* Space between images */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+figure {
+    text-align: center;
+    width: 200px; /* Control size of images */
+
+    img {
+    width: 100%; /* Make image fill the figure */
+    height: auto;
+    border-radius: 10px; /* Optional rounded corners */
+    
+    }
+}
+
+figcaption {
+    margin-top: 10px;
+    font-family: Opening Hours Sans;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .image-gallery {
+        flex-direction: column; /* Stack images vertically */
+        align-items: center;
+    }
+}
+
+
+.vinyl-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: Opening Hours Sans, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+}
+
+.vinyl-section p {
+    margin-bottom: 3rem;
+}
+
+v1 {
+    font-family: Opening Hours Sans, sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    color: rgb(1, 3, 138);
+}
+
+
+.cassettes-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: Opening Hours Sans, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+}
+
+.cassettes-section p {
+    margin-bottom: 3rem;
+}
+
+cas1 {
+    font-family: Opening Hours Sans, sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    color: rgb(1, 3, 138);
+}
+
+.cd-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: Opening Hours Sans, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+}
+
+.cd-section p {
+    margin-bottom: 3rem;
+}
+
+cd1 {
+    font-family: Opening Hours Sans, sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    color: rgb(1, 3, 138);
+}
+
