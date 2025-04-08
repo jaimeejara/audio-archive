@@ -24,8 +24,8 @@ html, body {
 }
 @font-face {
     font-family: Opening Hours Sans;
-    src: url('/fonts/OpeningHoursSans-Regular.woff') format('woff'),
-            url('/fonts/OpeningHoursSans-Regular.woff2') format('woff2');
+    src: url('/css/fonts/OpeningHoursSans-Regular.woff') format('woff'),
+            url('/css/fonts/OpeningHoursSans-Regular.woff2') format('woff2');
     font-weight: regular;
     font-style: regular;
 }
