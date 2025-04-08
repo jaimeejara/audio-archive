@@ -23,7 +23,7 @@ html, body {
     }
 }
 @font-face {
-    font-family: 'Opening Hours Sans';
+    font-family: 'OpeningHoursSans-Regular';
     src: url('fonts/OpeningHoursSans-Regular.woff') format('woff'),
             url('fonts/OpeningHoursSans-Regular.woff2') format('woff2');
     font-weight: regular;
@@ -34,7 +34,7 @@ html, body {
     top: 20px;
     right: 0; /* Keeps the navbar aligned to the right */
     left: auto; /* Keeps it aligned to the right */
-    font-family: "OpeningHours-Sans", sans-serif;
+    font-family: "OpeningHoursSans-Regular", sans-serif;
     font-size: clamp(1px, 2vw, 15px); /* Responsive font size between 10px and 15px */
     display: flex;
     justify-content: flex-end; /* Align the links to the left */
@@ -72,7 +72,7 @@ html, body {
 }
 
 .homePage h1 {
-    font-family: "OpeningHours-Sans", sans-serif;
+    font-family: "OpeningHoursSans-Regular", sans-serif;
     color: rgb(1, 3, 138);
     font-size: clamp(2rem, 8vw, 6rem);
     margin: 0;
@@ -101,7 +101,7 @@ html, body {
 }
 
 h2, h3, h4, h5, h6 {
-    font-family: "OpeningHours-Sans", sans-serif;
+    font-family: "OpeningHoursSans-Regular", sans-serif;
     font-size: 3rem;
     text-align: center;
     margin-top: 60px;
@@ -132,7 +132,7 @@ figure {
 
 figcaption {
     margin-top: 10px;
-    font-family: "OpeningHours-Sans", sans-serif;
+    font-family: "OpeningHoursSans-Regular", sans-serif;
     font-size: 1rem;
     color: #555;
 }
@@ -150,7 +150,7 @@ figcaption {
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
-    font-family: "OpeningHours-Sans", sans-serif;
+    font-family: "OpeningHoursSans-Regular", sans-serif;
     font-size: 1.25rem;
     line-height: 1.6;
     color: #333;
@@ -162,7 +162,7 @@ figcaption {
 }
 
 v1 {
-    font-family: "OpeningHours-Sans", sans-serif;
+    font-family: "OpeningHoursSans-Regular", sans-serif;
     font-size: 2.5rem;
     text-align: center;
     margin-top: 60px;
@@ -175,7 +175,7 @@ v1 {
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
-    font-family: "OpeningHours-Sans", sans-serif;
+    font-family: "OpeningHoursSans-Regular", sans-serif;
     font-size: 1.25rem;
     line-height: 1.6;
     color: #333;
@@ -187,7 +187,7 @@ v1 {
 }
 
 cas1 {
-    font-family: "OpeningHours-Sans", sans-serif;
+    font-family: "OpeningHoursSans-Regular", sans-serif;
     font-size: 2.5rem;
     text-align: center;
     margin-top: 60px;
@@ -199,7 +199,7 @@ cas1 {
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
-    font-family: "OpeningHours-Sans", sans-serif;
+    font-family: "OpeningHoursSans-Regular", sans-serif;
     font-size: 1.25rem;
     line-height: 1.6;
     color: #333;
@@ -211,7 +211,7 @@ cas1 {
 }
 
 cd1 {
-    font-family: "OpeningHours-Sans", sans-serif;
+    font-family: "OpeningHoursSans-Regular", sans-serif;
     font-size: 2.5rem;
     text-align: center;
     margin-top: 60px;
