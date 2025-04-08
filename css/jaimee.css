@@ -132,7 +132,7 @@ figure {
 
 figcaption {
     margin-top: 10px;
-    font-family: Opening Hours Sans;
+    font-family: Opening Hours Sans, sans-serif;
     font-size: 1rem;
     color: #555;
 }
