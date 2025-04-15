@@ -30,7 +30,7 @@ html, body {
     font-style: regular;
 }
 .nav-bar {
-    position: fixed;
+    position: absolute;
     top: 20px;
     right: 0; /* Keeps the navbar aligned to the right */
     left: auto; /* Keeps it aligned to the right */
